@@ -1,7 +1,7 @@
 # Unsupervised Program Synthesis for Images using Tree-Structured LSTM 
 This repository contains code accompaning the paper: [Unsupervised Program Synthesis for Images using Tree-Structured LSTM](https://arxiv.org/abs/2001.10119).
 
-Here we only include the code for 2D CSGNet. 
+We include code that learns to approximate CAD chair dataset without supervision.  
 
 ### Dependency
 - Python 3.*
@@ -11,12 +11,14 @@ Here we only include the code for 2D CSGNet.
   source activate CSGNet
   ```
 
+###Data
+
+- CAD furniture dataset is included in the `data/cad` directory.  
 
 
 
-
-### Tree LSTM RL Training
-- To train a network using RL, fill up configuration in `config_tree.yml` or keep the default values and then run:
+### RL Training
+- To train a network using RL, fill up configuration in `config/config_tree_cad.yml` or keep the default values and then run:
     ```
     python train_tree.py --config config_file
     ```

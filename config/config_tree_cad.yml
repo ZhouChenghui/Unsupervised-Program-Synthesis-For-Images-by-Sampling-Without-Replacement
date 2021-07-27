@@ -4,14 +4,13 @@ comment = "Write some meaningful comments that can be used in future to identify
 grammar_file = "grammar/grammar"
 
 [train]
-model_path = tree_chamfer_full_grammar_rao_{} # tree1_toy_7_stepwise_entropyplot_0.02_decay_0.999_per10_chamfer+iou+edge+cutoff+0.3_med_grammar_mixed_power_20_2_pateince_inf_0.9_momentum_lr_0.1_no_jitter_2_intermediate3_normalizeG_4_beam_5_maxlen_{}
+model_path = tree_chamfer_full_grammar_cad_{}
 
 # Whether to load a pretrained model or not
 preload_model = False
 
 # path to the pre-trained model
-pretrain_model_path = "trained_models/tree_chamfer_grammar_chair_2_ec0.006_beam301_max8_program11/error_model.pth"
-#"trained_models/tree_chamfer_grammar_chair_2_ec0.006_beam301_max8_program11/error_model.pth" #"trained_models/mix_len_cr_percent_equal_batch_3_13_prop_100_hdsz_2048_batch_2000_optim_adam_lr_0.001_wd_0.0_enocoderdrop_0.0_drop_0.2_step_mix_mode_12.pth"
+pretrain_model_path = "///"
 
 # number of GPU
 num_gpu = 1
@@ -22,7 +21,8 @@ num_epochs = 5000
 # batch size
 batch_size = 3
 
-# number of realistic batches in GPU
+# number of realistic batches in GPU,
+# equal to batch size above when the gpu can handle the batch size
 gpu_batch = 3
 
 # hidden size of RNN
@@ -65,16 +65,16 @@ patience = 10
 mode = 2
 
 # Number of beams
-beam_n = 151
+beam_n = 601
 
 # Max length
-max_len = 7
+max_len = 6
 
 # program length
-program_len = 13
+program_len = 11
 
-# program data file
-data_file = "/home/chenghuz/CSGNet_tree/CSGNet/training_data/shape_153_length_5.txt"
+# program data file used for synthetic training
+data_file = "///"
 
 # training set size
 training_size = 10000 #12000
@@ -83,7 +83,7 @@ training_size = 10000 #12000
 testing_size = 3000 #4630
 
 # number of input channels for the encoder
-input_channel = 4
+input_channel = 3
 
 # type of reward functions
 reward = "chamfer"
