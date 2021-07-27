@@ -1,0 +1,92 @@
+comment = "Write some meaningful comments that can be used in future to identify the intents of running this experiment."
+
+# grammar file
+grammar_file = "grammar/grammar"
+
+[train]
+model_path = tree_chamfer_full_grammar_rao_{} # tree1_toy_7_stepwise_entropyplot_0.02_decay_0.999_per10_chamfer+iou+edge+cutoff+0.3_med_grammar_mixed_power_20_2_pateince_inf_0.9_momentum_lr_0.1_no_jitter_2_intermediate3_normalizeG_4_beam_5_maxlen_{}
+
+# Whether to load a pretrained model or not
+preload_model = False
+
+# path to the pre-trained model
+pretrain_model_path = "trained_models/tree_chamfer_grammar_chair_2_ec0.006_beam301_max8_program11/error_model.pth"
+#"trained_models/tree_chamfer_grammar_chair_2_ec0.006_beam301_max8_program11/error_model.pth" #"trained_models/mix_len_cr_percent_equal_batch_3_13_prop_100_hdsz_2048_batch_2000_optim_adam_lr_0.001_wd_0.0_enocoderdrop_0.0_drop_0.2_step_mix_mode_12.pth"
+
+# number of GPU
+num_gpu = 1
+
+# Number of epochs to run during training
+num_epochs = 5000
+
+# batch size
+batch_size = 3
+
+# number of realistic batches in GPU
+gpu_batch = 3
+
+# hidden size of RNN
+hidden_size = 1024
+
+# Output feature size from CNN
+input_size = 2048
+
+# Canvas shape, keep it 64
+canvas_shape = 64
+
+# temeprature decay
+temperature = 1
+
+# Learning rate
+lr = 0.01
+
+# Entropy coefficient
+ec = 0.009
+
+# Optimizer: RL training: "sgd" or supervised training: "adam"
+optim = sgd
+
+# l2 Weight decay
+weight_decay = 0.0
+
+# dropout for Decoder network
+dropout = 0.2
+
+# Encoder dropout
+encoder_drop = 0.2
+
+# Whether to schedule the learning rate or not
+lr_sch = False
+
+# Number of epochs to wait before decaying the learning rate.
+patience = 10
+
+# 1: test, 2: train
+mode = 2
+
+# Number of beams
+beam_n = 151
+
+# Max length
+max_len = 7
+
+# program length
+program_len = 13
+
+# program data file
+data_file = "/home/chenghuz/CSGNet_tree/CSGNet/training_data/shape_153_length_5.txt"
+
+# training set size
+training_size = 10000 #12000
+
+# testing set size
+testing_size = 3000 #4630
+
+# number of input channels for the encoder
+input_channel = 4
+
+# type of reward functions
+reward = "chamfer"
+
+# synthetic data or cad data
+data_type = "cad"
