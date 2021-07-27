@@ -67,7 +67,7 @@ mode = 2
 # Number of beams
 beam_n = 601
 
-# Max length
+# Max length, or max number of shapes
 max_len = 6
 
 # program length
@@ -77,10 +77,10 @@ program_len = 11
 data_file = "///"
 
 # training set size
-training_size = 10000 #12000
+training_size = 10000
 
 # testing set size
-testing_size = 3000 #4630
+testing_size = 3000
 
 # number of input channels for the encoder
 input_channel = 3
