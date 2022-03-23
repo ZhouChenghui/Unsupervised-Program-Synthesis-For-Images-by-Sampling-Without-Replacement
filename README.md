@@ -1,5 +1,5 @@
-# Unsupervised Program Synthesis for Images using Tree-Structured LSTM 
-This repository contains code accompaning the paper: [Unsupervised Program Synthesis for Images using Tree-Structured LSTM](https://arxiv.org/abs/2001.10119).
+# Unsupervised Program Synthesis for Images By Sampling Without Replacement
+This repository contains code accompaning the paper: [Unsupervised Program Synthesis for Images By Sampling Without Replacement](https://proceedings.mlr.press/v161/zhou21b.html).
 
 We include code that learns to approximate CAD chair dataset without supervision.  
 
